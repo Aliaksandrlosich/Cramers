@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Presentation</title>
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>Presentation topic: Primitive Data Types</h1>
+					<h3>Made by: Losich Alexander</h3>
+				</section>
+
+				<section>
+					<h2>Primitive Data Types</h2>
+				    <ul>
+				    	<li>Number</li>
+				    	<li>Boolean</li>
+				    	<li>Null</li>
+				    	<li>Undefined</li>
+				    	<li>String</li>
+
+				    </ul>
+				</section>
+
+				<section>
+					<section>
+					<h2>Primitive Data Types: operator typeoff</h2>
+					<p>The typeoff result is a string containing the type.</p>
+					<p>Example: </p>
+					<pre><code data-trim contenteditable>
+typeof undefined; // “undefined“
+typeof 0; // “number“
+typeof true; // “boolean“
+typeof "foo"; // “string”
+typeof null;//”object”
+					</code></pre>
+				</section>
+				<section>
+					<img src="img/mem.jpg">
+				</section>
+				</section>
+
+				<section>
+					<h2>Primitive Data Types: Boolean</h2>
+					<p>Can have one of  two values:</p>
+					<ul>
+						<li>True</li>
+						<li>False</li>
+					</ul>
+					<p>Methods:</p>
+					<pre><code data-trim contenteditable>
+toString();
+valueOf();
+					</code></pre>
+				</section>
+                <section>
+					<section>
+						<h2>Primitive Data Types: Undefined</h2>
+						<p>Undefined is a property of the global object; i.e., it is a variable in global scope. The initial value of undefined is the primitive value undefined.</p>
+						<ul>
+							<li>A variable that has not been assigned a value is of type undefined.</li>
+							<li>A function returns undefined if a value was not returned.</li>
+							<li>Null is not equivalent to undefined. </li>
+						</ul>
+						<pre><code data-trim contenteditable>
+Null==Undefined ;//true 
+Null===Undefined; //false
+						</code></pre>
+					</section>
+
+					<section>
+						<img src="img/mem2.jpg">
+					</section>
+				</section>
+
+				<section>
+					<h2>Primitive Data Types: Null</h2>
+					<p>The value null represents the intentional absence of any object value. It is one of JavaScript's primitive values.</p>
+					<ul>
+						<li>Has only one value:null</li>
+						<li>Any variable that is set to null is not undefined</li>
+					</ul>
+					<p>It just has no value</p>
+					<p>Typeoff returns object on null because the standart say to</p>
+				</section>
+
+				<section>
+					<section>
+						<h2>primitive data types: Number</h2>
+						<p>The single type number is used for both integers and fractional numbers. There are special numerical values ​​Infinity (infinity) and NaN (computation error).</p>
+						<p>alert (0xFF); // 255 in hexadecimal system.</p>
+						<p>Also available is an entry in the “scientific format” (they also say “floating point entry”), which looks like 'number' e 'number of zeros'.</p>
+					</section>
+
+					<section>
+						<h2>primitive data types: Number//NuN</h2>
+						<p>If the mathematical operation cannot be performed, then the special value NaN (Not-A-Number) is returned.</p>
+						<p>The value NaN is used to denote a mathematical error and has the following properties:</p>
+						<ul>
+							<li>The meaning of NaN is the only one of its kind, which is not equal to anything, including itself.</li>
+							<li>Any operation with NaN returns NaN</li>
+							<li>The NaN value can be checked with the special function isNaN (n), which converts the argument to a number and returns true if NaN turned out, and false for any other value.</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>primitive data types: Number//Math</h2>
+						<p>Generated automatically and globally defined Method include:</p>
+						<pre><code data-trim contenteditable>
+Math.sin(x);		Math.cos(x)
+Math.round(x);		Math.pow(x,y);
+Math.tan(x);		Math.log(x);
+Math.floor(x); 		Math.trunc(x);
+						</code></pre>
+
+					</section>
+				</section>
+					
+				<section>
+					<section>
+						<h2>primitive data types:string</h2>
+						<p>Strings are created using double or single quotes:</p>
+						<pre><code data-trim contenteditable>
+var text = "Hello";
+var anotherText = 'World';
+						</code></pre>
+						<p>Lower case letters come after capital letters, so they are always larger.</p>
+						<p>The contents of the string in JavaScript cannot be changed. You can not take a symbol in the middle and replace it. Once a string is created, it is forever.</p>
+					</section>
+
+					<section>
+						<h2>primitive data types:string//methods</h2>
+						<pre><code data-trim contenteditable>
+Str.length; //it's getting its length.
+Str.indexOf("id"); //It returns the position where the substring is located
+Str.slice(start , end); //Extracts a section of a string and returns a new string
+Str.concat(); //Combines the text of two strings and returns a new string
+Str.match(); // Used to match a regular expression against a string
+And any more
+						</code></pre>
+					</section>
+				</section>
+
+				<section>
+					<h1>The End</h1>
+					<h3>Author Alexandr Losich</h3>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme,
+				transition: Reveal.getQueryHash().transition || 'default',
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+		</script>
+	</body>
+</html>
